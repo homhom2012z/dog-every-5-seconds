@@ -6,16 +6,16 @@ import { Image } from "@chakra-ui/react";
 const DogImage = () => {
   const loadLocalStorage = () => {
     if (typeof window !== "undefined") {
-      return localStorage.getItem("dogeveryfiveseconds_duration");
+      return Number(localStorage.getItem("dogeveryfiveseconds_duration"));
     }
   };
 
   const setDefaultDuration = () => {
     if (typeof window !== "undefined") {
-      localStorage.setItem("dogeveryfiveseconds_duration", 3);
+      localStorage.setItem("dogeveryfiveseconds_duration", 5);
     }
 
-    return 3;
+    return 5;
   };
 
   const duration = loadLocalStorage()
@@ -41,7 +41,10 @@ const DogImage = () => {
       () => {
         fetchImage();
         if (typeof window !== "undefined") {
-          duration = localStorage.getItem("dogeveryfiveseconds_duration");
+          const readLocal = Number(
+            localStorage.getItem("dogeveryfiveseconds_duration")
+          );
+          duration = readLocal ? readLocal : setDefaultDuration();
         }
       },
       duration ? duration * 1000 : 5000

@@ -20,7 +20,7 @@ import { BsPatchPlusFill, BsPatchMinusFill } from "react-icons/bs";
 import HelperText from "./HelperText";
 
 const DurationDrawer = ({ isOpen, onClose, firstField }) => {
-  const localDuration = 3;
+  const localDuration = 5;
   if (typeof window !== "undefined") {
     localDuration = localStorage.getItem("dogeveryfiveseconds_duration");
   }
