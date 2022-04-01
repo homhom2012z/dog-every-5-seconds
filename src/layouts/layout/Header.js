@@ -13,16 +13,8 @@ import { BsClockFill } from "react-icons/bs";
 
 import ThemeToggle from "../../components/ThemeToggle";
 import DurationDrawer from "../../components/DurationDrawer";
+import HelperText from "../../components/HelperText";
 
-function DrawerExample() {
-  return (
-    <>
-      <Button leftIcon={<AddIcon />} colorScheme="teal" onClick={onOpen}>
-        Create user
-      </Button>
-    </>
-  );
-}
 const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const firstField = useRef();
@@ -30,9 +22,13 @@ const Header = () => {
   return (
     <>
       <Flex as="header" width="full" align="center">
-        <Heading as="h1" size="md">
-          <Link href="/">Dogs every 5 seconds</Link>
-        </Heading>
+        <HelperText label={"Github: dog-every-5-seconds"}>
+          <Heading as="h1" size="md">
+            <Link href="https://github.com/homhom2012z/dog-every-5-seconds">
+              Dogs every 5 seconds
+            </Link>
+          </Heading>
+        </HelperText>
 
         <Box marginLeft="auto">
           <Stack direction={{ base: "row" }} spacing={4}>
