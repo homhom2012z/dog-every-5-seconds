@@ -7,7 +7,7 @@ const ImageMotion = ({ trigger, children }) => {
       y: 0,
       transition: {
         ease: "easeInOut",
-        duration: 2.4,
+        duration: 2.1,
       },
     },
     hide: {
