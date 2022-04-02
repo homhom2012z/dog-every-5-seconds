@@ -42,9 +42,9 @@ const DurationDrawer = ({ isOpen, onClose, firstField }) => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       localStorage.setItem("dogeveryfiveseconds_fadeeffect", fadeEffect);
-      console.log(
-        "re render" + localStorage.getItem("dogeveryfiveseconds_fadeeffect")
-      );
+      // console.log(
+      //   "re render" + localStorage.getItem("dogeveryfiveseconds_fadeeffect")
+      // );
     }
   }, [fadeEffect]);
 
@@ -116,7 +116,7 @@ const DurationDrawer = ({ isOpen, onClose, firstField }) => {
                           size={"lg"}
                           onChange={() => {
                             setFadeEffect(fadeEffect ? false : true);
-                            console.log("set Fade Effect");
+                            // console.log("set Fade Effect");
                           }}
                           isChecked={fadeEffect ? true : false}
                         />
